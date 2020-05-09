@@ -1,5 +1,0 @@
-;M98 Pextrude_start_sound
-M98 Plockxzmotion.g
-M83 
-G0 E0:30:0:0;
-;M98 Pextrude_stop_sound

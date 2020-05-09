@@ -1,3 +1,0 @@
-M302 P1 ; Allow cold extrusion
-M117 "Cold extruder movement allowed"
-M300 P500 S5000

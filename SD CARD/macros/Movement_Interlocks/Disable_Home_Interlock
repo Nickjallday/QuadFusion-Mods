@@ -1,6 +1,0 @@
-; Crane Cold Extrusion
-; Print M3D
-G90                                     	; Absolute Positioning(toolhead)
-M564 H0						; Forbid movement without homing.
-M117 "Movement without Homing Forbidden"
-M300 P2000 S1500
