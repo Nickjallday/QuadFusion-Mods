@@ -1,0 +1,43 @@
+; Configuration file for M3D QuadFusion Duet Maestro (firmware version 2.0.3 or newer)
+; Created by Nickjallday (https://github.com/Nickjallday/QuadFusion-Mods)
+; Created Date: 5/8/2020
+
+NOTE: Macro folder contains macros that are required by the LCD Screen Menu.
+
+1. Update your Duet2 Maestro Firmware to 2.03+ (I'm using 2.0.5.1)
+   Power off printer when complete
+
+2. BACKUP YOUR ENTIRE SD CARD!
+
+3. Delete your SD Card
+
+4. Copy the included folders to the empty root directory of your SD Card:
+/filaments
+/gcodes
+/macros
+/menu
+/sys
+/www
+
+5. Open your old /sys/motion.g and copy your M92, EX:X:X:X values on your new /sys/new motion.g M92, EX:X:X:X values.
+
+6. *Optional (For Traditional Z-endstop):
+Delete: 
+/macros/BLTouch (you will need to redownload this if you ever install a BLTouch).
+
+7. *Optional (For BLTouch Integration):
+File Edits:
+/menu/e_main
+ Comment out lines 12-14
+ Comment in lines 17-20
+/sys/config.g
+ Comment in lines 25,28,31
+ Set G31 X Y Z offets (XY are the distances from the probe to the nozzle location, Z is the distance below the nozzle the probe activates)
+/sys/homeall.g
+ Comment out lines 19-21
+ Comment in lines 24-29
+/sys/homez.g
+ Comment out lines 10-18
+ Comment in lines 21-27
+Set G31 X Y Z offets (config.g Line 29)
+ 
