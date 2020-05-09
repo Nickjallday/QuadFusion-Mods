@@ -1,0 +1,8 @@
+M140 S65
+M106 S225			; turn on fan 50% to keep shroud cool during bed leveling.
+G28                                                                          ; Home all Axis
+M190 S65
+G29
+M140 S0 		; turn off bed
+M104 S0		; turn off extruder
+M106 S0 		; turn off fan

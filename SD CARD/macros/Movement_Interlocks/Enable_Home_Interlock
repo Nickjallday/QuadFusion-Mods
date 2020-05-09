@@ -1,0 +1,6 @@
+; Crane Cold Extrusion
+; Print M3D
+G91                                     	; Relative Positioning(toolhead)
+M564 H1						; Allow movement without homing.
+M117 "Movement without Homing Allowed"
+M300 P500 S5000

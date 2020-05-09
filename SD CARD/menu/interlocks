@@ -1,0 +1,14 @@
+; Configuration file for M3D QuadFusion Duet Maestro (firmware version 2.0.3 or newer)
+; Created by Nickjallday (https://github.com/Nickjallday/QuadFusion-Mods)
+; Created Date: 5/8/2020
+;
+button R0 C0 F0 T" BACK " A"return"
+text R15 C5 T"Cold Filament Extrude Lock:"
+button R27 C5 T"Disable" A"M98 P#0" L"/macros/Movement_Interlocks/Disable_Cold_Extruder_Movement"
+text T"    /    "
+button T"Enable" A"M98 P#0" L"/macros/Movement_Interlocks/Enable_Cold_Extruder_Movement"
+image R38 C0 L"hline.img"
+text R39 C5 T"Axis Home Movement Lock:"
+button R51 C5 T"Disable" A"M98 P#0" L"/macros/Movement_Interlocks/Disable_Home_Interlock"
+text T"    /    "
+button T"Enable" A"M98 P#0" L"/macros/Movement_Interlocks/Enable_Home_Interlock"
