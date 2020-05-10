@@ -34,6 +34,8 @@ File Edits:
 /menu/e_main
  Comment out lines 12-14
  Comment in lines 17-20
+/menu/bedleveling
+ Comment in line 9
 /sys/config.g
  Comment in lines 25,28,31
  Set G31 X Y Z offets (XY are the distances from the probe to the nozzle location, Z is the distance below the nozzle the probe activates)
