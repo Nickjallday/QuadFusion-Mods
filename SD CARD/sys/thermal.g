@@ -4,9 +4,9 @@
 
 ; This file declares heater and fan settings.
 ; Heaters
-M305 P0 T100000 B4036		      			; Thermistor Config for NTC 100k
+M305 P0 T100000 B4036		      			  ; Thermistor Config for NTC 100k
 M143 H0 S120                   				; Set temperature limit for heater 0 to 120C
-M305 P1 T100000 B5060 C1.890000e-7			; Thermistor Config for NTC 100k   Tuned for MK4 nozzles
+M305 P1 T100000 B5060 C1.890000e-7		; Thermistor Config for NTC 100k   Tuned for MK4 nozzles
 M143 H1 S260      				            ; Set temperature limit for heater 1 to 260C
 
 ; Fans

@@ -13,19 +13,19 @@ M98 Pthermal.g                   ; Call Heater/Fan/Sensing Module
 M98 Ptools.g                     ; Call Toolhead Module
 
 ;Addon Configurations:
-
+;
 ; Auto-save Print Recovery
 M911 S21.0 R23.0 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000"
-
+;
 ;Dump Bin EXP1 Pin open on boot (if installed)
 ;M42 P61 S0
 
 ;BL Touch Configurations:
 ; A= # of probes, P Probe Type = 9 (BL Touch) F= Probe Speed mm/min, T= Speed between probe locations mm/min 
 ;M558 P9 H3 F120 A1 T9000 
-
+;
 ; X & Y= Min/Max Probeable bed locations, S= X area divided by 4, for 5 probe locations
 ;M557 X35:195 Y10:220 S40 ; define mesh grid and interval for polling
-
-;X/Y Offset from nozzle, and Z probe height offset from nozzle at 0mm on bed (offsets set for Nickjallday's Fan shroud).
+;
+;X/Y Probe distance from nozzle (If Nozzle is at the bed's X0/Y0), and Z probe height offset from nozzle at 0mm on bed (offsets set for Nickjallday's Fan shroud).
 ;G31 X49 Y-5 Z1.59 P25 

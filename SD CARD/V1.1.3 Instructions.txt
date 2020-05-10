@@ -26,6 +26,10 @@ Delete:
 /macros/BLTouch (you will need to redownload this if you ever install a BLTouch).
 
 7. *Optional (For BLTouch Integration):
+Notes: 
+BLTouch Macros folder is required for LCD screen BLTouch Menu
+deployprobe.g, and retractprobe.g in the sys folder are required if you're not copying the entire SD card.
+
 File Edits:
 /menu/e_main
  Comment out lines 12-14
