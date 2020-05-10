@@ -57,7 +57,7 @@ value N512 D2 W30
 image R44 C0 L"hline.img"
 ;
 ;
-text R21 C5 T"Flow: "
+text R21 C5 T"Flow:  "
 alter R21 C24 H2 N400 W20
 text T"%"
 ;
