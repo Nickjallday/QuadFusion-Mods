@@ -14,4 +14,4 @@ M143 H1 S260      				            ; Set temperature limit for heater 1 to 260C
 M106 P0 T45 H1 F50                         ; Set Heatsink Fan F0 to Thermostatic
 M106 P1 H-1 F50 L51 X255                   ; Set Part Cooler Fans F1 to Gcode Control
 M106 P2 S0.8 F50                           ; Set case fan always on at 80%
-;M106 P2 S0 F25000 C"LEDs"                 ; Swap with line above If LEDS connected instead of fan on P2.
+;M106 P2 S0 F240 C"LEDs"                 ; Swap with line above If LEDS connected instead of fan on P2.
