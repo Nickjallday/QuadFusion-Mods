@@ -25,11 +25,11 @@ M906 X1000 Y1000 Z1000 E450:450:450:450 I30	; Set motor currents (mA)
 M84 S60							                        ; Set idle timeout
 
 ;Firmware Retraction (Actived in a slicer by sending G10/G11 Commands)
-M207 S2.0 R0.0 F1500 T900 Z0.2				
+M207 S2.0 F900 Z0.2				
 
 ;Axis Limits
 M208 X-15 Y0 Z0 S1					; Set axis minima
-M208 X230 Y230 Z250 S0		  ; Set axis maxima
+M208 X235 Y235 Z235 S0		  ; Set axis maxima
 
 ;Endstops
 M574 X1 Y1 Z1 S1					  ; Set active High Endstops

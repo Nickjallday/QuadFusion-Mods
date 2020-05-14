@@ -7,15 +7,15 @@
 ; Edited Date: 5/8/2020
 
 ;Traditional Z-Endstop Configuration
-G91              ; relative positioning
+G91               ; relative positioning
 G1 Z10 F1200 S2   ; lift Z relative to current position
-G90              ; absolute positioning
-G1 X15 Y9 F3600  ; go to first probe point
-G1 Z-450 F1200 S1; Quickly go to z min
-G1 Z5 F600 S2    ; Lift Z to re-check
-G1 Z-450 F120 S1 ; Slowly lower to Z-min
-G91              ; relative positioning
-G1 Z5 F360 S2    ; lift Z relative to current position
+G90               ; absolute positioning
+G1 X15 Y15 F3600  ; go to first probe point (comment out for y-endstop mod)
+;G1 X15 Y9 F3600  ; go to first probe point (comment in for y-endstop mod)
+G1 Z-450 F1200 S1 ; Quickly go to z min
+G1 Z5 F600 S2     ; Lift Z to re-check
+G1 Z-450 F120 S1  ; Slowly lower to Z-min
+
 
 ;BL Touch Configuration
 ;G91                     ; relative positioning
@@ -23,8 +23,7 @@ G1 Z5 F360 S2    ; lift Z relative to current position
 ;G90                     ; absolute positioning
 ;G1 X68.5 Y122.5 F3600   ; Bed Center Probe location, X=117.5 - (X offset from config.g), Y=117.5 - (Y offset from config.g)
 ;G30                     ; home Z by probing the bed
-;G91                     ; relative positioning
-;G1 Z10 F360 S2          ; lift Z relative to current position
 
-
-G90                     ; absolute positioning
+G91                      ; relative positioning
+G1 Z10 F360 S2           ; lift Z relative to current position
+G90                      ; absolute positioning
