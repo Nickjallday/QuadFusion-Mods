@@ -10,9 +10,9 @@ M569 P0 S1 D3 V0        ; Drive 0 goes backwards
 M569 P1 S0 D3 V0        ; Drive 1 goes backwards
 M569 P2 S0 D3 V0        ; Drive 2 goes backwards
 M569 P3 S1 D3 V0        ; Drive 3 (E0)
-M569 P4 S1 D3 V0			  ; Drive 4 (E1)
-M569 P5 S1 D3 V0			  ; Drive 5 (E2)
-M569 P6 S1 D3 V0			  ; Drive 6 (E3)
+M569 P4 S1 D3 V0	; Drive 4 (E1)
+M569 P5 S1 D3 V0	; Drive 5 (E2)
+M569 P6 S1 D3 V0	; Drive 6 (E3)
 
 ;Steppers settings
 M350 X16 Y16 Z16 E16:16:16:16 I1			; Set Micro-stepping
