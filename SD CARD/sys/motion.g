@@ -15,8 +15,8 @@ M569 P5 S1 D3 V0	; Drive 5 (E2)
 M569 P6 S1 D3 V0	; Drive 6 (E3)
 
 ;Steppers settings
-M350 X16 Y16 Z16 E16:16:16:16 I1			; Set Micro-stepping
-M92 X80 Y80 Z400 E2155:2160:2150:2170		        ; Set steps per mm
+M350 X16 Y16 Z16 E16:16:16:16 I0			; Set Micro-stepping
+M92 X80 Y80 Z400 E2140:2140:2140:2140		        ; Set steps per mm
 M566 X900 Y900 Z90 E120					; Set Maximum Jerk (mm/min)
 M203 X9000 Y9000 Z1002 E1800				; Set maximum speeds (mm/min)
 M201 X1000 Y1000 Z90 E240:240:240:240		    	; Set accelerations (mm/s^2)

@@ -28,4 +28,4 @@ M911 S21.0 R23.0 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000"
 ;M557 X35:195 Y10:220 S40 ; define mesh grid and interval for polling
 ;
 ;X/Y Probe distance from nozzle (If Nozzle is at the bed's X0/Y0), and Z probe height offset from nozzle at 0mm on bed (offsets set for Nickjallday's Fan shroud).
-;G31 X49 Y-5 Z1.59 P25 
+;G31 X49 Y0 Z1.59 P25 
