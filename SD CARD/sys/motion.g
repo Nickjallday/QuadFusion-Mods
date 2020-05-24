@@ -22,10 +22,7 @@ M203 X9000 Y9000 Z1002 E1800				; Set maximum speeds (mm/min)
 M201 X1000 Y1000 Z90 E240:240:240:240		    	; Set accelerations (mm/s^2)
 
 ;Stepper Motor Currents
-M906 X1000 Y1000 Z1000 E450:450:450:450 I30		; Stock (decreased by 30mA for temp) motor currents (mA)
-;M906 X1000 Y1000 Z1000 E1000:1000:1000:1000 I30	; Bowden motor currents (%70 of 1.5A) (mA)
-;M906 X1000 Y1000 Z1000 E260:260:260:260 I30		; John Radwanski's Upgraded Motors, Motor currents (mA)
-
+M906 X1000 Y1000 Z1000 E480:480:480:480 I30		; Stock (decreased by 30mA for temp) motor currents (mA)
 
 M84 S60							                        ; Set idle timeout
 
