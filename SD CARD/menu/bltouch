@@ -4,7 +4,8 @@
 ;
 button R0 C0 F0 T" BACK " A"return"
 button R15 C5 T"Get Height" A"M98 P#0" L"/macros/BLTouch/Get_Current_Position_Height"
-button R27 C5 T"Extend Probe" A"M98 P#0" L"/macros/BLTouch/Extend_Probe"
-button R27 C70 T"Reset Probe" A"M98 P#0" L"/macros/BLTouch/Reset_Probe"
-button R39 C5 T"Test Probe" A"M98 P#0" L"/macros/BLTouch/Start_Probe_Test"
+button R15 C70 T"Reset Probe" A"M98 P#0" L"/macros/BLTouch/Reset_Probe"
+button R27 C5 T"Probe Down" A"M98 P#0" L"/macros/BLTouch/Probe_Down"
+button R27 C70 T"Probe Up" A"M98 P#0" L"/macros/BLTouch/Probe_Up"
+button R39 C5 T"Start Test" A"M98 P#0" L"/macros/BLTouch/Start_Probe_Test"
 button R39 C70 T"Stop Test" A"M98 P#0" L"/macros/BLTouch/Stop_Probe_Test"

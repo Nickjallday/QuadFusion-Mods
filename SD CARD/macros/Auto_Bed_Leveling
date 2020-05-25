@@ -1,5 +1,5 @@
 M140 S65
-M106 S225			; turn on fan 50% to keep shroud cool during bed leveling.
+M106 S170			; turn on fan 50% to keep shroud cool during bed leveling.
 G28                                                                          ; Home all Axis
 M190 S65
 G29
