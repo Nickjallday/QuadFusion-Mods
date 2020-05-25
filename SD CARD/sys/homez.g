@@ -6,18 +6,18 @@
 ; Edited by Nickjallday (https://github.com/Nickjallday/QuadFusion-Mods)
 ; Edited Date: 5/8/2020
 
-;Traditional Z-Endstop Configuration
+;Non-BLTouch Z Home Configuration
 G91               ; relative positioning
 G1 Z10 F1200 S2   ; lift Z relative to current position
 G90               ; absolute positioning
-G1 X15 Y15 F3600  ; go to first probe point (comment out for y-endstop mod)
-;G1 X15 Y9 F3600  ; go to first probe point (comment in for y-endstop mod)
+G1 X15 Y15 F3600  ; go to first probe point (Comment out for Y-enstop mod for printable bed thumb screws)
+;G1 X15 Y9 F3600  ; go to first probe point (Comment in for Y-enstop mod for printable bed thumb screws)
 G1 Z-450 F1200 S1 ; Quickly go to z min
 G1 Z5 F600 S2     ; Lift Z to re-check
 G1 Z-450 F120 S1  ; Slowly lower to Z-min
 
 
-;BL Touch Configuration
+;BL Touch Z Home Configuration
 ;G91                     ; relative positioning
 ;G1 Z10 F6000 S2         ; lift Z relative to current position
 ;G90                     ; absolute positioning

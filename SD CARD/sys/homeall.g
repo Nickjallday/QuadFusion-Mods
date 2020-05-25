@@ -12,16 +12,16 @@ G1 Z10 F600 S2          ; lift Z prior to X Move.
 G1 S1 X-305 Y-555 F3000 ; move quickly to X axis endstop and stop there (first pass)
 G1 X10 Y10 F900         ; go back a few mm
 G1 S1 X-305 Y-555 F360  ; move normally to X axis endstop once more (second pass)
-G1 X15 Y52 F900         ; Move to Corner  (Comment out for Y-enstop mod)
-;G1 X15 Y9 F900          ; Move to Corner  (Comment in for Y-enstop mod)
+G1 X15 Y52 F900         ; Move to Corner  (Comment in for Y-enstop mod for printable bed thumb screws)
+;G1 X15 Y9 F900          ; Move to Corner  (Comment in for Y-enstop mod for printable bed thumb screws)
 G92 X0 Y0               ; X/Y is at Zero
 
-;Z-Enstop Home all Configuration
+;Non-BLTouch Z Home Configuration
 G1 Z-450 F1002 S1
 G1 Z10 F360 S2
 G1 Z-450 F120 S1
 
-;BL Touch Configuration
+;BL Touch Z Home Configuration
 ;G91                     ; relative positioning
 ;G1 Z10 F6000 S2         ; lift Z relative to current position
 ;G90                     ; absolute positioning
