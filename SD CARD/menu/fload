@@ -8,9 +8,9 @@ alter R10 C80 H2 N100 W20
 text T" / "
 value N0 W20
 ;
-text R15 C5 F0 T"Rate:"
-button R15 C35 F0 T"Fast" A"G0 F300"
-button R15 C57 F0 T"Slow" A"G0 F60"
+text R15 C5 F0 T"mm/s: "
+button R15 C35 F0 T" 3 " A"G0 F300"
+button R15 C57 F0 T" 1 " A"G0 F60"
 ;
 button R27 C5 F0 T"L: 0" A"M98 Pload_port0"
 button R39 C5 F0 T"L: 1" A"M98 Pload_port1"

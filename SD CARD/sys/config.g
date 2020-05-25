@@ -16,9 +16,6 @@ M98 Ptools.g                     ; Call Toolhead Module
 ;
 ; Auto-save Print Recovery
 M911 S21.0 R23.0 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000"
-;
-;Dump Bin EXP1 Pin open on boot (if installed)
-;M42 P61 S0
 
 ;BL Touch Configurations:
 ; A= # of probes, P Probe Type = 9 (BL Touch) F= Probe Speed mm/min, T= Speed between probe locations mm/min 
