@@ -46,11 +46,11 @@ image R32 C0 L"hline.img"
 ;
 ; ETC on Main Page (Comment in Progress if you comment out the next two lines.)
 text R33 C5 T"ETC: "
-value N536 W45
+value N536 W55
 ;
 ; Progress on Main Page (Comment Out ETC if you comment in the next two lines.)
 ;text R33 C5 T"Progress: "
-;value N535
+;value N535 W45
 ;
 text C85 T"Z: "
 value N512 D2 W30
