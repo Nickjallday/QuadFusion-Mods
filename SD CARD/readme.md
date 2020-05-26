@@ -21,11 +21,24 @@ NOTE: Macro folder contains macros that are required by the LCD Screen Menu.
 
 5. Open your old /sys/motion.g and copy your M92, EX:X:X:X values on your new /sys/new motion.g M92, EX:X:X:X values.
 
-6. *Optional (For Traditional Z-endstop):
+6. *Optional (% PRogress instead of ETC on main LCD screen)
+/menu/main
+
+Comment Out:
+; ETC on Main Page (Comment in Progress if you comment out the next two lines.)
+text R33 C5 T"ETC: "
+value N536 W55
+
+Comment In:
+; Progress on Main Page (Comment Out ETC if you comment in the next two lines.)
+;text R33 C5 T"Progress: "
+;value N535 W45
+
+7. *Optional (For Traditional Z-endstop):
 Delete: 
 /macros/BLTouch (you will need to redownload this if you ever install a BLTouch).
 
-7. *Optional (For BLTouch Integration):
+8. *Optional (For BLTouch Integration):
 Notes: 
 BLTouch Macros folder is required for LCD screen BLTouch Menu
 deployprobe.g, and retractprobe.g in the sys folder are required if you're not copying the entire SD card.
