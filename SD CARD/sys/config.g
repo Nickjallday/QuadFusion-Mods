@@ -19,10 +19,10 @@ M911 S21.0 R23.0 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000"
 
 ;BL Touch Configurations:
 ; A= # of probes, P Probe Type = 9 (BL Touch) F= Probe Speed mm/min, T= Speed between probe locations mm/min 
-;M558 P9 H3 F120 A1 T9000 
+;M558 P9 H3 F120 A1 T7200 
 ;
 ; X & Y= Min/Max Probeable bed locations, S= X area divided by 4, for 5 probe locations
-;M557 X35:195 Y10:220 S40 ; define mesh grid and interval for polling
+;M557 X35:215 Y25:205 S45 ; define mesh grid and interval for polling
 ;
 ;X/Y Probe distance from nozzle (If Nozzle is at the bed's X0/Y0), and Z probe height offset from nozzle at 0mm on bed (offsets set for Nickjallday's Fan shroud).
-;G31 X49 Y0 Z0.0 P25 
+;G31 X49 Y10 Z1.22 P25

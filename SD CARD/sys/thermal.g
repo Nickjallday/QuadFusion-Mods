@@ -12,6 +12,6 @@ M143 H1 S260      				            ; Set temperature limit for heater 1 to 260C
 ; Fans
 ; For Crane Quad: F0 is Heatsink Fan, F1 is Part Cooling fans, F2 is Case Fan
 M106 P0 T45 H1 F50                         ; Set Heatsink Fan F0 to Thermostatic
-M106 P1 H-1 F50 L51 X255                   ; Set Part Cooler Fans F1 to Gcode Control
-M106 P2 S0.8 F50                           ; Set case fan always on at 80%
+M106 P1 H-1 F50 L51 X255                   ; Set Part Cooler Fans F1 to Gcode Control (20%Min 100%Max)
+M106 P2 S1 F50                           ; Set case fan always on at 100%
 ;M106 P2 S0 F240 C"LEDs"                 ; Swap with line above If LEDS connected instead of fan on P2.

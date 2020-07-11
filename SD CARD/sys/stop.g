@@ -12,7 +12,7 @@ M221 S100		; Reset Extrusion Factor to 100%
 G1 E-2			; Relieve pressure.
 G1 Z5			; raise nozzle 5mm from printed part
 G1 X5 Y5		; Shift nozzle
-G90			    ; Absolute positioning
+G90			; Absolute positioning
 M106 S0			; Fan off
 M104 S0			; extruder heater off
 M84			    ; Steppers off

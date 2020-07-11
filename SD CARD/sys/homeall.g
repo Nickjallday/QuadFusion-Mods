@@ -24,7 +24,7 @@ G1 Z-450 F120 S1
 ;G91                     ; relative positioning
 ;G1 Z10 F6000 S2         ; lift Z relative to current position
 ;G90                     ; absolute positioning
-;G1 X68.5 Y122.5 F3600   ; Bed Center Probe location, X=117.5 - (X offset from config.g), Y=117.5 - (Y offset from config.g)
+;G1 X66 Y105 F3600   ; Bed Center Probe location, X=117.5 - (X offset from config.g), Y=117.5 - (Y offset from config.g)
 ;G30                     ; home Z by probing the bed
 ;G91                     ; relative positioning
 
