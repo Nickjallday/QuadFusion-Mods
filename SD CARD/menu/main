@@ -25,15 +25,15 @@ text V6 T"                 "
 button V6 T"ABORT" A"M0 H1"
 ;
 text R0 C16 T"Nozzle"
-alter R9 C0 H2 N100
+alter R9 C0 H2 N100 W20
 text T" / "
-value N0
+value N0 W20
 ;
 ;
 text R0 C70 T"Bed"
-alter R9 H2 C48 N180
+alter R9 H2 C48 N180 W20
 text T" / "
-value N80
+value N80 W20
 ;
 ;
 text R0 C102 T"Fan"
