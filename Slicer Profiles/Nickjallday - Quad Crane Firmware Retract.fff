@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<profile name="Nickjallday - M3D Crane QuadFusion" version="2020-07-28 21:21:46" app="S3D-Software 4.1.2">
+<profile name="Nickjallday - Quad Crane Firmware Retract" version="2020-08-16 20:02:24" app="S3D-Software 4.1.2">
   <baseProfile>Default</baseProfile>
-  <printMaterial>PLA</printMaterial>
-  <printQuality>0.2 LH</printQuality>
+  <printMaterial>PETG</printMaterial>
+  <printQuality>.175mm Layer Height</printQuality>
   <printExtruders>All Extruders</printExtruders>
   <extruder name="Primary Extruder">
     <toolheadNumber>0</toolheadNumber>
@@ -11,19 +11,19 @@
     <width>0.42</width>
     <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>4.5</retractionDistance>
+    <retractionDistance>3.5</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
-    <retractionZLift>0.2</retractionZLift>
-    <retractionSpeed>1800</retractionSpeed>
+    <retractionZLift>0</retractionZLift>
+    <retractionSpeed>1200</retractionSpeed>
     <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
-    <useWipe>1</useWipe>
-    <wipeDistance>4</wipeDistance>
+    <useWipe>0</useWipe>
+    <wipeDistance>2.1</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
-  <layerHeight>0.2</layerHeight>
-  <topSolidLayers>6</topSolidLayers>
-  <bottomSolidLayers>4</bottomSolidLayers>
+  <layerHeight>0.175</layerHeight>
+  <topSolidLayers>4</topSolidLayers>
+  <bottomSolidLayers>3</bottomSolidLayers>
   <perimeterOutlines>3</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
   <startPointOption>3</startPointOption>
@@ -31,7 +31,7 @@
   <startPointOriginY>500</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
-  <firstLayerHeightPercentage>100</firstLayerHeightPercentage>
+  <firstLayerHeightPercentage>108</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
   <useRaft>0</useRaft>
@@ -44,7 +44,7 @@
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
   <useSkirt>1</useSkirt>
   <skirtExtruder>0</skirtExtruder>
-  <skirtLayers>2</skirtLayers>
+  <skirtLayers>1</skirtLayers>
   <skirtOutlines>2</skirtOutlines>
   <skirtOffset>6</skirtOffset>
   <usePrimePillar>0</usePrimePillar>
@@ -62,7 +62,7 @@
   <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Grid</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
-  <infillPercentage>20</infillPercentage>
+  <infillPercentage>15</infillPercentage>
   <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
@@ -90,18 +90,16 @@
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="225"/>
-    <setpoint layer="2" temperature="220"/>
+    <setpoint layer="2" temperature="225"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
     <isHeatedBed>1</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="70"/>
+    <setpoint layer="1" temperature="80"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
-    <setpoint layer="3" speed="50"/>
   </fanSpeed>
   <blipFanToFullPower>1</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
@@ -109,7 +107,7 @@
   <minCoolingSpeedSlowdown>20</minCoolingSpeedSlowdown>
   <increaseFanForCooling>0</increaseFanForCooling>
   <minFanLayerTime>45</minFanLayerTime>
-  <maxCoolingFanSpeed>100</maxCoolingFanSpeed>
+  <maxCoolingFanSpeed>30</maxCoolingFanSpeed>
   <increaseFanForBridging>1</increaseFanForBridging>
   <bridgingFanSpeed>100</bridgingFanSpeed>
   <use5D>1</use5D>
@@ -143,15 +141,15 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>0</overridePrinterModels>
   <printerModelsOverride></printerModelsOverride>
-  <startingGcode>M104 S170 				; set extruder no-ooze temp,G28 					; home all axes,G29 					; Uncomment if no BLTouch Installed - Auto Bed Leveling...,M104 S[extruder0_temperature]		; Heatup and Position for Purge,G92 E0 					; reset extruder,G1 X0 Y0 Z10.0 F5000 			; move to purge position,M109 S[extruder0_temperature]		; Heatup and Purge Nozzle,G1 E12 F1500 				; detract all filament 3mm,G92 E0 					; reset extruder,G1 X0.1 Y20 Z0.28 F5000.0		; move to start-line position,G1 X0.1 Y200.0 Z0.28 F1500.0 E15 	; draw 1st line,G1 X0.5 Y200.0 Z0.28 F1500.0                 ; move over,G1 X0.5 Y20 Z0.28 F1500.0 E30	           ; draw 2nd line,G1 X0.9 Y20 Z0.28 F5000.0		; move over,G1 X0.9 Y200.0 Z0.28 F1500.0 E45    	; draw 3rd line,G92 E0                                                ; reset extruder,G1 Z0.5 F5000 E-2 			; move z up little to prevent scratching of surface,G92 E0 					; reset extruder</startingGcode>
-  <layerChangeGcode>;M400							; wait for all movement to complete,;G91,;G1 Z5 F1000						; Move up 5mm,;G90,;G1 X0 Y115 F7200,;M106 P2 S1						; Switch on LEDS,;M400 							; wait for all movement to complete,;M118 P4 S&quot;LAYER CHANGE&quot; 				; take a picture,;G4 P500 						; wait a bit,;M106 P2 S0						; Switch off LEDS,;G1 X[current_position_x] Y[current_position_y] F7200	; Move to last known position,;G91,;G1 Z-5 F1000						; Move down 5mm,;G90</layerChangeGcode>
+  <startingGcode>M190 S[bed0_temperature]		; wait for first layer bed tempurature,M104 S170				; set extruder no-ooze temp,G28					; home all axes,G29					; Auto Bed Leveling...,M104 S[extruder0_temperature]		; Heatup and Purge Nozzle,G92 E0					; reset extruder,G1 X0 Y0 Z10.0 F5000			; move to purge position,M109 S[extruder0_temperature]		; Wait For Nozzle Heat,G92 E0					; reset extruder,G1 F1500				; set purge feedrate,M567 P0 E1:0:0:0			; set purge motor 0,G1 X0.1 Y20 Z0.3			; move to start-line position,G1 X0.1 Y200 Z0.3 E15			; draw 1st line,M567 P0 E0:1:0:0			; set purge motor 1,G1 X0.5 Y200 Z0.3			; move over,G1 X0.5 Y20 Z0.3  E30			; draw 2nd line,M567 P0 E0:0:1:0			; set purge motor 2,G1 X0.9 Y20 Z0.3			; move over,G1 X0.9 Y200 Z0.3 E45			; draw 3rd line,M567 P0 E0:0:0:1			; set purge motor 3,G1 X1.2 Y200 Z0.3			; move over,G1 X1.2 Y20 Z0.3 E60			; draw 4th line,G1 X1.6 Y20 Z0.3			; move over,G1 X1.6 Y90 Z0.3			; wipe purge string,G92 E0					; reset extruder</startingGcode>
+  <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
   <endingGcode>M140 S0 		; turn off bed,G91			; switch to relative positioning,G1 X-10 Y10 Z10 F1000	; move away from part,G90 			; back to absolute,G1 X0 Y230 F1000	; prepare for part removal,M84 			; disable motors,M104 S0			; turn off extruder,M106 S0 		; turn off fan</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
-  <postProcessing></postProcessing>
+  <postProcessing>{REPLACE &quot;G1 E-3.5000 F1200\n&quot; &quot;G10\n&quot;},{REPLACE &quot;G1 E0.0000 F1200\n&quot; &quot;G11\n&quot;}</postProcessing>
   <defaultSpeed>3000</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
@@ -180,8 +178,8 @@
   <retractBetweenLayers>1</retractBetweenLayers>
   <useRetractionMinTravel>1</useRetractionMinTravel>
   <retractionMinTravel>3</retractionMinTravel>
-  <retractWhileWiping>1</retractWhileWiping>
-  <onlyWipeOutlines>1</onlyWipeOutlines>
+  <retractWhileWiping>0</retractWhileWiping>
+  <onlyWipeOutlines>0</onlyWipeOutlines>
   <avoidCrossingOutline>1</avoidCrossingOutline>
   <maxMovementDetourFactor>3</maxMovementDetourFactor>
   <toolChangeRetractionDistance>0</toolChangeRetractionDistance>
@@ -200,8 +198,7 @@
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="225"/>
-      <setpoint layer="2" temperature="220"/>
+      <setpoint layer="1" temperature="205"/>
     </temperatureController>
     <globalBedTemperature>70</globalBedTemperature>
     <fanSpeed>
@@ -317,7 +314,7 @@
     <useSkirt>1</useSkirt>
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
-    <startingGcode>M104 S170 				; set extruder no-ooze temp,G28 					; home all axes,G29 					; Uncomment if no BLTouch Installed - Auto Bed Leveling...,M104 S[extruder0_temperature]		; Heatup and Position for Purge,G92 E0 					; reset extruder,G1 X0 Y0 Z10.0 F5000 			; move to purge position,M109 S[extruder0_temperature]		; Heatup and Purge Nozzle,G1 E12 F1500 				; detract all filament 3mm,G92 E0 					; reset extruder,G1 X0.1 Y20 Z0.28 F5000.0		; move to start-line position,G1 X0.1 Y200.0 Z0.28 F1500.0 E15 	; draw 1st line,G1 X0.5 Y200.0 Z0.28 F1500.0                 ; move over,G1 X0.5 Y20 Z0.28 F1500.0 E30	           ; draw 2nd line,G1 X0.9 Y20 Z0.28 F5000.0		; move over,G1 X0.9 Y200.0 Z0.28 F1500.0 E45    	; draw 3rd line,G92 E0                                                ; reset extruder,G1 Z0.5 F5000 E-2 			; move z up little to prevent scratching of surface,G92 E0 					; reset extruder</startingGcode>
+    <startingGcode>M190 S[bed0_temperature]		; wait for first layer bed tempurature,M104 S170				; set extruder no-ooze temp,G28					; home all axes,G29					; Auto Bed Leveling...,M104 S[extruder0_temperature]		; Heatup and Purge Nozzle,G92 E0					; reset extruder,G1 X0 Y0 Z10.0 F5000			; move to purge position,M109 S[extruder0_temperature]		; Wait For Nozzle Heat,G92 E0					; reset extruder,G1 F1500				; set purge feedrate,M567 P0 E1:0:0:0			; set purge motor 0,G1 X0.1 Y20 Z0.3			; move to start-line position,G1 X0.1 Y200 Z0.3 E15			; draw 1st line,M567 P0 E0:1:0:0			; set purge motor 1,G1 X0.5 Y200 Z0.3			; move over,G1 X0.5 Y20 Z0.3  E30			; draw 2nd line,M567 P0 E0:0:1:0			; set purge motor 2,G1 X0.9 Y20 Z0.3			; move over,G1 X0.9 Y200 Z0.3 E45			; draw 3rd line,M567 P0 E0:0:0:1			; set purge motor 3,G1 X1.2 Y200 Z0.3			; move over,G1 X1.2 Y20 Z0.3 E60			; draw 4th line,G1 X1.6 Y20 Z0.3			; move over,G1 X1.6 Y90 Z0.3			; wipe purge string,G92 E0					; reset extruder</startingGcode>
     <toggleTemperatureController name="Extruder 1" status="on" stabilize="on"/>
   </autoConfigureExtruders>
   <autoConfigureMaterial name="PETG">
@@ -325,37 +322,35 @@
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="245"/>
-      <setpoint layer="2" temperature="240"/>
+      <setpoint layer="2" temperature="225"/>
     </temperatureController>
     <globalBedTemperature>80</globalBedTemperature>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
-      <setpoint layer="3" speed="30"/>
     </fanSpeed>
   </autoConfigureMaterial>
-  <autoConfigureQuality name="0.3 LH">
-    <layerHeight>0.3</layerHeight>
+  <autoConfigureQuality name=".07mm Layer Height">
+    <layerHeight>0.07</layerHeight>
     <topSolidLayers>5</topSolidLayers>
+    <bottomSolidLayers>4</bottomSolidLayers>
+    <skirtLayers>1</skirtLayers>
+    <infillPercentage>15</infillPercentage>
+    <supportInfillPercentage>40</supportInfillPercentage>
+  </autoConfigureQuality>
+  <autoConfigureQuality name=".175mm Layer Height">
+    <layerHeight>0.175</layerHeight>
+    <topSolidLayers>4</topSolidLayers>
     <bottomSolidLayers>3</bottomSolidLayers>
     <skirtLayers>1</skirtLayers>
-    <infillPercentage>20</infillPercentage>
+    <infillPercentage>15</infillPercentage>
     <supportInfillPercentage>40</supportInfillPercentage>
   </autoConfigureQuality>
-  <autoConfigureQuality name="0.2 LH">
-    <layerHeight>0.2</layerHeight>
-    <topSolidLayers>6</topSolidLayers>
-    <bottomSolidLayers>4</bottomSolidLayers>
-    <skirtLayers>2</skirtLayers>
-    <infillPercentage>20</infillPercentage>
-    <supportInfillPercentage>40</supportInfillPercentage>
-  </autoConfigureQuality>
-  <autoConfigureQuality name="0.1 LH">
-    <layerHeight>0.1</layerHeight>
-    <topSolidLayers>6</topSolidLayers>
-    <bottomSolidLayers>4</bottomSolidLayers>
-    <skirtLayers>2</skirtLayers>
-    <infillPercentage>20</infillPercentage>
+  <autoConfigureQuality name=".26mm Layer Height">
+    <layerHeight>0.26</layerHeight>
+    <topSolidLayers>3</topSolidLayers>
+    <bottomSolidLayers>3</bottomSolidLayers>
+    <skirtLayers>1</skirtLayers>
+    <infillPercentage>15</infillPercentage>
     <supportInfillPercentage>40</supportInfillPercentage>
   </autoConfigureQuality>
 </profile>
