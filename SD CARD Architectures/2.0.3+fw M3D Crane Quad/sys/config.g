@@ -1,10 +1,8 @@
 ; config.g
 ; Main Configuration file that runes on power on.
 
-; Configuration file for M3D QuadFusion Duet Maestro (firmware version 2.0.3 or newer)
-; Created by Sindarius
 ; Edited by Nickjallday (https://github.com/Nickjallday/QuadFusion-Mods)
-; Edited Date: 5/8/2020
+; Edited Date: 1/22/2021
 
 ; General preferences
 G90                            ; Send absolute coordinates...
