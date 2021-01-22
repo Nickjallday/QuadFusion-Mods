@@ -1,3 +1,0 @@
-M302 P1 ; Enable cold extrusion
-M117 "Cold Extrude - Enabled"
-M300 P500 S5000
