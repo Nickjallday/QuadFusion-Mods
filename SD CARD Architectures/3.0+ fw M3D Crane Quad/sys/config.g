@@ -69,10 +69,10 @@ M568 P0 S1                                                   ; enable mixing for
 M567 P0 E0.25:0.25:0.25:0.25   	                             ; set mixing ratios for tool 0
 
 ; Custom settings
-M207 S2.0 R0.0 F300 T300 Z0 				     ;S sets retraction and reprime in mm.  F sets feed rate.  F300 and S2.0 are max recommended.  Ignore this setting in gcode without G10/G11 calls.
-G0 F60 							     ;Set Feedrate of 1mm/s onload
+M207 S2.0 R0.0 F300 T300 Z0 				     ; Firmware Retraction: S sets retraction and reprime in mm.  F sets feed rate.  F300 and S2.0 are max recommended.  Ignore this setting in gcode without G10/G11 calls.
 
 ; Miscellaneous
+G0 F60 							     ; Set Feedrate of 1mm/s onload
 M501                                                         ; load saved parameters from non-volatile memory
 M911 S21 R23 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000"           ; set voltage thresholds and actions to run on power loss
 T0							     ; Select Tool at Startup
