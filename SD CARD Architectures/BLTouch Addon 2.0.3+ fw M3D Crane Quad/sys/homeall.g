@@ -1,5 +1,5 @@
 ; homeall.g
-; Called to Home All Axes
+; called to home all axes
 
 ;XY Homeing
 G91               	; relative positioning
@@ -12,6 +12,6 @@ G92 X0 Y0           	; X is at Zero
 G90                     ; absolute positioning
 
 ;Z homing
-G1 Z-450 F1002 S1
-G1 Z10 F360 S2
-G1 Z-450 F120 S1
+G1 X164 Y125 F6000	; Bed Center Probe location, X=115 + (X offset from config.g), Y=115 + (Y offset from config.g)
+G30                     ; home Z by probing the bed
+
