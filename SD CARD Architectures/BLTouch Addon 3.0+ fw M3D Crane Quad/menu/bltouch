@@ -4,8 +4,8 @@
 ;
 button R0 C0 F0 T" BACK " A"return"
 button R15 C5 T"Probe Position" A"G30 S-1"
-button R15 C70 T"Reset Probe" A"M280 P64 S260"
-button R27 C5 T"Probe Down" A"M280 P64 S10"
-button R27 C70 T"Probe Up" A"M280 P64 S90"
-button R39 C5 T"Start Test" A"M280 P64 S120"
-button R39 C70 T"Stop Test" A"M280 P64 S160"
+button R15 C70 T"Reset Probe" A"M280 P0 S260"
+button R27 C5 T"Probe Down" A"M280 P0 S10"
+button R27 C70 T"Probe Up" A"M280 P0 S90"
+button R39 C5 T"Start Test" A"M280 P0 S120"
+button R39 C70 T"Stop Test" A"M280 P0 S160"
