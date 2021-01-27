@@ -25,11 +25,11 @@ M569 P6 S1 D2 V0                                             ; physical drive 6 
 M584 X0 Y1 Z2 E3:4:5:6                                       ; set drive mapping
 M350 X16 Y16 Z16 E16:16:16:16 I1                             ; configure microstepping with interpolation
 M92 X80 Y80 Z400 E2140:2140:2140:2140   		     ; set steps per mm
-M566 X600 Y600 Z24 E150     				     ; set maximum instantaneous speed changes (mm/min)
-M203 X9000 Y9000 Z1200 E1800 				     ; set maximum speeds (mm/min)
-M201 X1200 Y1200 Z90 E300 		     		     ; set accelerations (mm/s^2)
-M906 X725 Y725 Z725 E460:460:460:460 I30                     ; set motor currents (mA) and motor idle factor in per cent (STOCK MOTORS)
-;M906 X725 Y725 Z725 E260:260:260:260 I30                    ; set motor currents (mA) and motor idle factor in per cent (JOHN'S COMMUNITY MOTORS)
+M566 X1200 Y1200 Z24 E150     				     ; set maximum instantaneous speed changes (mm/min)
+M203 X9000 Y9000 Z180 E2100 				     ; set maximum speeds (mm/min)
+M201 X700 Y700 Z10 E300 		     		     ; set accelerations (mm/s^2)
+M906 X760 Y760 Z760 E460:460:460:460 I50                     ; set motor currents (mA) and motor idle factor in per cent (STOCK MOTORS)
+;M906 X760 Y760 Z760 E260:260:260:260 I50                    ; set motor currents (mA) and motor idle factor in per cent (JOHN'S COMMUNITY MOTORS)
 M84 S30                                                      ; Set idle timeout
 
 ; Axis Limits
