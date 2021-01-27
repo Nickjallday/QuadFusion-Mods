@@ -27,7 +27,7 @@ M350 X16 Y16 Z16 E16:16:16:16 I1                             ; configure microst
 M92 X80 Y80 Z400 E2140:2140:2140:2140   		     ; set steps per mm
 M566 X1200 Y1200 Z24 E150     				     ; set maximum instantaneous speed changes (mm/min)
 M203 X9000 Y9000 Z180 E2100 				     ; set maximum speeds (mm/min)
-M201 X700 Y700 Z10 E300 		     		     ; set accelerations (mm/s^2)
+M201 X500 Y500 Z10 E300 		     		     ; set accelerations (mm/s^2)
 M906 X760 Y760 Z760 E460:460:460:460 I50                     ; set motor currents (mA) and motor idle factor in per cent (STOCK MOTORS)
 ;M906 X760 Y760 Z760 E260:260:260:260 I50                    ; set motor currents (mA) and motor idle factor in per cent (JOHN'S COMMUNITY MOTORS)
 M84 S30                                                      ; Set idle timeout
