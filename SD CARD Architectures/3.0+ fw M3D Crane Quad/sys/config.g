@@ -25,11 +25,11 @@ M569 P5 S1 D2 V0                                             ; physical drive 5 
 M569 P6 S1 D2 V0                                             ; physical drive 6 goes forwards
 M584 X0 Y1 Z2 E3:4:5:6                                       ; set drive mapping
 M350 X16 Y16 Z16 E16:16:16:16 I1                             ; configure microstepping with interpolation
-M92 X80 Y80 Z400 E2140:2140:2140:2140   		             ; set steps per mm
-M566 X600 Y600 Z24 E120 P1   				                 ; set maximum instantaneous speed changes (mm/min)
-M203 X9000 Y9000 Z1200 E2100 				                 ; set maximum speeds (mm/min)
-M201 X2000 Y2000 Z100 E240 		     		                 ; set accelerations (mm/s^2)
-M204 P500 T2000					                             ; set acceleration for Print Moves (P) and Travel Moves (T)
+M92 X80 Y80 Z400 E2140:2140:2140:2140   		     ; set steps per mm
+M566 X600 Y600 Z24 E120 P1   				     ; set maximum instantaneous speed changes (mm/min)
+M203 X9000 Y9000 Z1200 E2100 				     ; set maximum speeds (mm/min)
+M201 X2000 Y2000 Z100 E240 		     		     ; set accelerations (mm/s^2)
+M204 P500 T1200					             ; set acceleration for Print Moves (P) and Travel Moves (T) (Set T1200 to T2000 if Stealthchop autooff is enabled on the M569 lines above)
 M906 X760 Y760 Z760 E460:460:460:460 I30                     ; set motor currents (mA) and motor idle factor in per cent (STOCK MOTORS)
 ;M906 X760 Y760 Z760 E260:260:260:260 I50                    ; set motor currents (mA) and motor idle factor in per cent (JOHN'S COMMUNITY MOTORS)
 M84 S30                                                      ; Set idle timeout
@@ -51,8 +51,8 @@ M140 H0                                             	     ; map heated bed to he
 M143 H0 S130                                        	     ; set temperature limit for heater 0 to 130C
 M308 S1 P"e0temp" Y"thermistor" T100000 B5060 C1.890000e-7   ; configure sensor 1 as thermistor on pin e0temp
 M950 H1 C"e0heat" T1                                         ; create nozzle heater output on e0heat and map it to sensor 1
-M307 H1 B0 S1 A567.3 C199.1 D6.8 V24			             ; disable bang-bang mode for heater  and set PWM limit, and A/C/D/V Values = ID Tuning (QuadFusion Thermistor)
-M143 H1 S255						                         ; set temperature limit for heater 0 to 265C						     
+M307 H1 B0 S1 A567.3 C199.1 D6.8 V24			     ; disable bang-bang mode for heater  and set PWM limit, and A/C/D/V Values = ID Tuning (QuadFusion Thermistor)
+M143 H1 S255						     ; set temperature limit for heater 0 to 265C						     
 
 ; Fans
 M950 F0 C"Coldend Heatsync" Q500                             ; create fan 0 on pin fan0 and set its frequency
