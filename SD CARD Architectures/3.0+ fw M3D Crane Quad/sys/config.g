@@ -30,8 +30,8 @@ M566 X600 Y600 Z24 E120 P1   				     ; set maximum instantaneous speed changes 
 M203 X9000 Y9000 Z1200 E3600 				     ; set maximum speeds (mm/min)
 M201 X1200 Y1200 Z100 E240 		     		     ; set accelerations (mm/s^2)
 M204 P500 T1000					             ; set acceleration for Print Moves (P) and Travel Moves (T)
-M906 X760 Y760 Z760 E460:460:460:460 I30                     ; set motor currents (mA) and motor idle factor in per cent (STOCK MOTORS)
-;M906 X760 Y760 Z760 E260:260:260:260 I30                    ; set motor currents (mA) and motor idle factor in per cent (JOHN'S COMMUNITY MOTORS)
+M906 X760 Y760 Z760 E460:460:460:460 I50                     ; set motor currents (mA) and motor idle factor in per cent (STOCK MOTORS)
+;M906 X760 Y760 Z760 E260:260:260:260 I50                    ; set motor currents (mA) and motor idle factor in per cent (JOHN'S COMMUNITY MOTORS)
 M84 S30                                                      ; Set idle timeout
 
 ; Axis Limits
