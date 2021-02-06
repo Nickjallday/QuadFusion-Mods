@@ -9,13 +9,12 @@ M208 X245 Y235 Z250 S0                             ; set axis maxima
 3. Replace the "; Endstops" in your /sys/config.g with the following settings
 
 ; Endstops
-M574 X1 S1 P"xstop"                                ; configure active-high endstop for low end on X via pin xstop
-M574 Y1 S1 P"ystop"                                ; configure active-high endstop for low end on Y via pin ystop
+M574 X1 Y1 S1                                      ; set active high endstops
+M574 Z1 S2                                         ; set endstops controlled by probe
 
 4. Add the "; Z-Probe" commands below after the "; Endstops" commands in your /sys/config.g
 
 ; Z-Probe
-M950 S0 C"^zprobe.mod"                             ; create servo pin 0 for BLTouch
-M558 P9 C"^zprobe.in" H5 F120 T9000                ; set Z probe type to bltouch and the dive height + speeds
-G31 P500 X49 Y10 Z0.00                             ; set Z probe trigger value, offset and trigger height
+M558 P9 H5 F120 T7200                              ; set Z probe type to bltouch and the dive height + speeds
+G31 P25 X49 Y10 Z0.0                               ; set Z probe trigger value, offset and trigger height
 M557 X35:195 Y35:195 S40                           ; define mesh grid
