@@ -44,15 +44,15 @@ M574 Y1 S1 P"ystop"                                          ; configure active-
 M574 Z1 S1 P"zstop"                                          ; configure active-high endstop for low end on Z via pin zstop
 
 ; Heaters
-M308 S0 P"bedtemp" Y"thermistor" T100000 B4036      	     ; configure sensor 0 as thermistor on pin bedtemp
-M950 H0 C"bedheat" T0                               	     ; create bed heater output on bedheat and map it to sensor 0   
-M307 H0 B0 S1.0 A86.3 C232.1 D0.5 V23.8             	     ; disable bang-bang mode for the bed heater, PWM Limit, and A/C/D/V Values = ID Tuning (Crane Bed Thermistor)
-M140 H0                                             	     ; map heated bed to heater 0
-M143 H0 S130                                        	     ; set temperature limit for heater 0 to 130C
-M308 S1 P"e0temp" Y"thermistor" T100000 B5060 C1.890000e-7   ; configure sensor 1 as thermistor on pin e0temp
-M950 H1 C"e0heat" T1                                         ; create nozzle heater output on e0heat and map it to sensor 1
-M307 H1 B0 S1 A567.3 C199.1 D6.8 V24			     ; disable bang-bang mode for heater  and set PWM limit, and A/C/D/V Values = ID Tuning (QuadFusion Thermistor)
-M143 H1 S255						     ; set temperature limit for heater 0 to 265C						     
+M308 S0 P"bedtemp" Y"thermistor" A"Bed" T100000 B4036      	        ; configure sensor 0 as thermistor on pin bedtemp
+M950 H0 C"bedheat" T0                               	     		; create bed heater output on bedheat and map it to sensor 0   
+M307 H0 B0 S1.0 A86.3 C232.1 D0.5 V23.8             	     		; disable bang-bang mode for the bed heater, PWM Limit, and A/C/D/V Values = ID Tuning (Crane Bed Thermistor)
+M140 H0                                             	     		; map heated bed to heater 0
+M143 H0 S130                                        	     		; set temperature limit for heater 0 to 130C
+M308 S1 P"e0temp" Y"thermistor" A"Nozzle" T100000 B5060 C1.890000e-7    ; configure sensor 1 as thermistor on pin e0temp
+M950 H1 C"e0heat" T1                                         		; create nozzle heater output on e0heat and map it to sensor 1
+M307 H1 B0 S1 A567.3 C199.1 D6.8 V24			     		; disable bang-bang mode for heater  and set PWM limit, and A/C/D/V Values = ID Tuning (QuadFusion Thermistor)
+M143 H1 S255						     		; set temperature limit for heater 0 to 265C						     
 
 ; Fans
 M950 F0 C"fan0" Q500                            	     ; create fan 0 on pin fan0 and set its frequency
@@ -60,7 +60,7 @@ M106 P0 C"Case Fan" S1 H1 T45                                ; set fan 0 value. 
 M950 F1 C"fan1" Q500                                 	     ; create fan 1 on pin fan1 and set its frequency
 M106 P1 C"Nozzle Fan" S1 H-1                                 ; set fan 1 value. Thermostatic control is turned off
 M950 F2 C"fan2" Q500                                         ; create fan 2 on pin fan2 and set its frequency
-M106 P2 C"ColdEnd Fan" S0.8 H1:0 T45                         ; set fan 2 value. Thermostatic control is turned on
+M106 P2 C"Coldend Fan" S0.8 H1:0 T45                         ; set fan 2 value. Thermostatic control is turned on
 
 ; Tools
 M563 P0 D0:1:2:3 H1 F1 S"Quad"                               ; define tool 0
