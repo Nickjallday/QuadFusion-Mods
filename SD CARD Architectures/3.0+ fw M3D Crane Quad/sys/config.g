@@ -55,12 +55,12 @@ M307 H1 B0 S1 A567.3 C199.1 D6.8 V24			     ; disable bang-bang mode for heater 
 M143 H1 S255						     ; set temperature limit for heater 0 to 265C						     
 
 ; Fans
-M950 F0 C"Coldend Heatsync" Q500                             ; create fan 0 on pin fan0 and set its frequency
-M106 P0 S1 H1 T45                                            ; set fan 0 value. Thermostatic control is turned on
-M950 F1 C"Parts Cooler" Q500                                 ; create fan 1 on pin fan1 and set its frequency
-M106 P1 S1 H-1                                               ; set fan 1 value. Thermostatic control is turned off
-M950 F2 C"Case" Q500                                         ; create fan 2 on pin fan2 and set its frequency
-M106 P2 S0.8 H1:0 T45                                        ; set fan 2 value. Thermostatic control is turned on
+M950 F0 C"fan0" Q500                            	     ; create fan 0 on pin fan0 and set its frequency
+M106 P0 C"Case Fan" S1 H1 T45                                    ; set fan 0 value. Thermostatic control is turned on
+M950 F1 C"fan1" Q500                                 	     ; create fan 1 on pin fan1 and set its frequency
+M106 P1 C"Nozzle Fan" S1 H-1                                  ; set fan 1 value. Thermostatic control is turned off
+M950 F2 C"fan2" Q500                                         ; create fan 2 on pin fan2 and set its frequency
+M106 P2 C"ColdEnd Fan" S0.8 H1:0 T45                             ; set fan 2 value. Thermostatic control is turned on
 
 ; Tools
 M563 P0 D0:1:2:3 H1 F1 S"Quad"                               ; define tool 0
