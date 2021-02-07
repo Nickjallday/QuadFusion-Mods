@@ -27,9 +27,9 @@ M584 X0 Y1 Z2 E3:4:5:6                                       ; set drive mapping
 M350 X16 Y16 Z16 E16:16:16:16 I1                             ; configure microstepping with interpolation
 M92 X80 Y80 Z400 E2140:2140:2140:2140   		     ; set steps per mm
 M566 X600 Y600 Z24 E120 P1   				     ; set maximum instantaneous speed changes (mm/min)
-M203 X9000 Y9000 Z1200 E3600 				     ; set maximum speeds (mm/min)
+M203 X9000 Y9000 Z1200 E1800 				     ; set maximum speeds (mm/min)
 M201 X1200 Y1200 Z100 E240 		     		     ; set accelerations (mm/s^2)
-M204 P500 T1000					             ; set acceleration for Print Moves (P) and Travel Moves (T)
+M204 P500 T1200					             ; set acceleration for Print Moves (P) and Travel Moves (T)
 M906 X760 Y760 Z760 E460:460:460:460 I50                     ; set motor currents (mA) and motor idle factor in per cent (STOCK MOTORS)
 ;M906 X760 Y760 Z760 E260:260:260:260 I50                    ; set motor currents (mA) and motor idle factor in per cent (JOHN'S COMMUNITY MOTORS)
 M84 S30                                                      ; Set idle timeout
@@ -74,7 +74,7 @@ M207 S2.0 R0.0 F300 T300 Z0 				     ; Firmware Retraction: S sets retraction an
 M572 D0:1:2:3 S0.22:0.22:0.22:0.22                           ; Pressure Advance calibration T0:T1:T2:T3
 
 ; Miscellaneous
-G0 F60 							     ; Set Feedrate of 1mm/s onload
+G1 F60 							     ; Set Feedrate of 1mm/s onload
 M501                                                         ; load saved parameters from non-volatile memory
 M911 S21 R23 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000"           ; set voltage thresholds and actions to run on power loss
 T0							     ; Select Tool at Startup
