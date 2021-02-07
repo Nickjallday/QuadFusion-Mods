@@ -70,7 +70,8 @@ M568 P0 S1                                                   ; enable mixing for
 M567 P0 E0.25:0.25:0.25:0.25   	                             ; set mixing ratios for tool 0
 
 ; Custom settings
-M207 S2.0 R0.0 F300 T300 Z0 				     ; Firmware Retraction: S sets retraction and reprime in mm.  F sets feed rate.  F300 and S2.0 are max recommended.  Ignore this setting in gcode without G10/G11 calls.
+M207 S1.0 F1200 Z0.2 					     ; Firmware Retraction S sets retraction in mm.  F sets feed rate.  Z sets Z lift. (only recommended using G10/G11 FWretract commands with John's motors) 
+M572 D0:1:2:3 S0.22:0.22:0.22:0.22                           ; Pressure Advance calibration T0:T1:T2:T3
 M572 D0:1:2:3 S0.22:0.22:0.22:0.22                           ; Pressure Advance calibration T0:T1:T2:T3
 
 ; Miscellaneous
