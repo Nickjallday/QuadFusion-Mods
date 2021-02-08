@@ -47,10 +47,8 @@ M574 X1 Y1 Z1 S1	     				     ; Set active High Endstops
 M305 P0 T100000 B4036		      		             ; Thermistor Config for NTC 100k
 M143 H0 S120                   			             ; Set temperature limit for heater 0 to 120C
 M140 S0							     ; map heated bed to heater 0
-M307 H0 A86.3  C232.1 D0.5 V23.8			     ; Thermal Tuneing for Bed
 M305 P1 T100000 B5060 C1.890000e-7		             ; Thermistor Config for NTC 100k   Tuned for MK4 nozzles
 M143 H1 S255      				             ; Set temperature limit for heater 1 to 260C
-M307 H1 A567.3 C199.1 D6.8 V24 				     ; Thermal Tuneing for hotend
 
 ; Fans
 M106 P0 T45 H1 F50                         		     ; Set Heatsink Fan F0 to Thermostatic

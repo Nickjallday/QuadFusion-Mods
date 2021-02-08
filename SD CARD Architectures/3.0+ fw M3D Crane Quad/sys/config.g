@@ -46,12 +46,12 @@ M574 Z1 S1 P"zstop"                                          ; configure active-
 ; Heaters
 M308 S0 P"bedtemp" Y"thermistor" A"Bed" T100000 B4036      	        ; configure sensor 0 as thermistor on pin bedtemp
 M950 H0 C"bedheat" T0                               	     		; create bed heater output on bedheat and map it to sensor 0   
-M307 H0 B0 S1.0 A86.3 C232.1 D0.5 V23.8             	     		; disable bang-bang mode for the bed heater, PWM Limit, and A/C/D/V Values = ID Tuning (Crane Bed Thermistor)
+M307 H0 B0 S1.0 			             	     		; disable bang-bang mode for the bed heater, PWM Limit.
 M140 H0                                             	     		; map heated bed to heater 0
 M143 H0 S130                                        	     		; set temperature limit for heater 0 to 130C
 M308 S1 P"e0temp" Y"thermistor" A"Nozzle" T100000 B5060 C1.890000e-7    ; configure sensor 1 as thermistor on pin e0temp
 M950 H1 C"e0heat" T1                                         		; create nozzle heater output on e0heat and map it to sensor 1
-M307 H1 B0 S1 A567.3 C199.1 D6.8 V24			     		; disable bang-bang mode for heater  and set PWM limit, and A/C/D/V Values = ID Tuning (QuadFusion Thermistor)
+M307 H1 B0 S1.0 						     	; disable bang-bang mode for heater  and set PWM limit.
 M143 H1 S255						     		; set temperature limit for heater 0 to 265C						     
 
 ; Fans
@@ -71,7 +71,6 @@ M567 P0 E0.25:0.25:0.25:0.25   	                             ; set mixing ratios
 
 ; Custom settings
 M207 S1.0 F1200 Z0.2 					     ; Firmware Retraction S sets retraction in mm.  F sets feed rate.  Z sets Z lift. (only recommended using G10/G11 FWretract commands with John's motors) 
-M572 D0:1:2:3 S0.22:0.22:0.22:0.22                           ; Pressure Advance calibration T0:T1:T2:T3
 M572 D0:1:2:3 S0.22:0.22:0.22:0.22                           ; Pressure Advance calibration T0:T1:T2:T3
 
 ; Miscellaneous
