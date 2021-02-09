@@ -9,4 +9,5 @@ text F0 T"."
 value F0 D0 W18 N533
 image R11 C0 L"hline.img"
 button R15 C5 T"Reboot Duet Maestro" A"M999"
-button R27 C5 T"Powerloss Recovery" A"menu powerRecover"
+button R27 C5 T"BLTouch" A"menu bltouch"
+button R39 C5 T"Powerloss Recovery" A"menu powerRecover"

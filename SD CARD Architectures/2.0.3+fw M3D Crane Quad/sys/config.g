@@ -45,15 +45,15 @@ M574 X1 Y1 Z1 S1	     				     ; Set active High Endstops
 
 ; Heaters
 M305 P0 T100000 B4036		      		             ; Thermistor Config for NTC 100k
-M143 H0 S120                   			             ; Set temperature limit for heater 0 to 120C
+M143 H0 S125                   			             ; Set temperature limit for heater 0 to 120C
 M140 S0							     ; map heated bed to heater 0
 M305 P1 T100000 B5060 C1.890000e-7		             ; Thermistor Config for NTC 100k   Tuned for MK4 nozzles
-M143 H1 S255      				             ; Set temperature limit for heater 1 to 260C
+M143 H1 S260      				             ; Set temperature limit for heater 1 to 260C
 
 ; Fans
 M106 P0 T45 H1 F50                         		     ; Set Heatsink Fan F0 to Thermostatic
 M106 P1 H-1 F50 L51 X255                                     ; Set Part Cooler Fans F1 to Gcode Control (20%Min 100%Max)
-M106 P2 S1 F50                                               ; Set case fan always on at 100% (P2 Fan) 
+M106 P2 S0.8 F50                                             ; Set case fan always on at 100% (P2 Fan) 
 
 ; Tools
 M563 P0 D0:1:2:3 H1 F1 S"Quad"				     ; Define default tool
@@ -64,6 +64,7 @@ G10 P0 S0
 ; Custom Settings
 M207 S1.0 F1200 Z0.2 					     ; Firmware Retraction S sets retraction in mm.  F sets feed rate.  Z sets Z lift. (only recommended using G10/G11 FWretract commands with John's motors) 
 M572 D0:1:2:3 S0.22:0.22:0.22:0.22                           ; Pressure Advance calibration T0:T1:T2:T3
+M912 P0 S0.00									   ; MCU Temp Cal, Turn Printer off and let cool for several hours before cal, S=Tr-Tc, Tr=(ColdNozzleTemp+ColdBedTemp)/2, Tc=MCU Temp <10 seconds after boot
 
 ; Misc
 M911 S21.0 R23.0 P"M913 X0 Y0 G91 M83 G1 Z3 E-5 F1000"       ; Powerloss Auto-save Print Recovery
