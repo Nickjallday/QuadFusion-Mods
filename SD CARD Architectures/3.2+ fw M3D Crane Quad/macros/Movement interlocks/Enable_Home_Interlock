@@ -1,0 +1,4 @@
+G91                         ; Relative Positioning(toolhead)
+M564 H1						; Allow movement without homing.
+M117 "Home Lock - Enabled"
+M300 P500 S5000
