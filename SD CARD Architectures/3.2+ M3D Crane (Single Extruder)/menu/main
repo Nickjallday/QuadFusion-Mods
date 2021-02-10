@@ -1,0 +1,68 @@
+; Configuration file for M3D QuadFusion Duet Maestro (firmware version 2.0.3 or newer)
+; Created by Nickjallday (https://github.com/Nickjallday/QuadFusion-Mods)
+; Created Date: 5/8/2020
+;
+; ------------------HEADER LINE-----------------------
+;
+image R0 C18 L"nozzle.img"
+alter R9 C2 H2 N100 W20
+text T"/"
+value N0 W20
+;
+image R0 C65 L"bed.img"
+alter R9 C48 H2 N180 W20
+text T"/"
+value N80 W20
+;
+image R0 C105 L"fan.img"
+alter R9 C97 H1 N301 W28
+;
+image R20 C0 L"hline.img"
+;
+; -----------------LINE 1---------------------
+;
+image R23 C4 L"flowrate.img"
+alter R21 C13 H2 N400 W17
+text T"%"
+;
+image R23 C47 L"speed.img"
+alter R21 C56 H2 N500 W17
+text T"%"
+;
+image R23 C90 L"baby.img"
+alter R21 C99 N521 W26 D2
+;
+image R32 C0 L"hline.img"
+;
+; -----------------LINE 2---------------------
+;
+value R33 C2 N535 W28 H1
+text T" "
+value N536 H0 W55
+text C89 T"Z:"
+value N512 D1 H1
+;
+image R44 C0 L"hline.img"
+;
+; -------------------------BOTTOM LINE (MENUS)----------------------
+; "Not printing" Menu
+;
+button R45 C0 F0 V5 T" HEAT " A"menu heat"
+button V5 T" MOVE " A"menu move"
+button V5 " CTRL " A"menu e_main"
+button V5 " PRINT " A"menu listFiles"
+;
+; "Printing" Menu
+;
+button R45 C0 F0 V2 T" BABYSTEP " A"menu babysteps"
+button V2 T" PAUSE " A"M25"
+;
+; "Paused" Menu
+;
+button R45 C0 F0 V6 T"  RESUME  " A"M24"
+button V6 T"  ABORT         " A"M0 H1"
+;
+; -------------------M117 Text display-----------------------
+;
+value R54 C0 F0 N501 W128
+;

@@ -1,0 +1,9 @@
+; Configuration file for M3D QuadFusion Duet Maestro (firmware version 2.0.3 or newer)
+; Created by Nickjallday (https://github.com/Nickjallday/QuadFusion-Mods)
+; Created Date: 5/8/2020
+;
+button R0 C0 F0 T" BACK " A"return"
+text T"      "
+button T" RELOAD " A"M20 P#0" L"1:/"
+image R11 C0 L"hline.img"
+files R15 F0 N4 I"1:/" A"M32 #0|return|return"

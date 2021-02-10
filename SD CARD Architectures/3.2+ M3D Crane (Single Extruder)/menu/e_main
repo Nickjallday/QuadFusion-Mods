@@ -1,0 +1,18 @@
+; Configuration file for M3D QuadFusion Duet Maestro (firmware version 2.0.3 or newer)
+; Created by Nickjallday (https://github.com/Nickjallday/QuadFusion-Mods)
+; Created Date: 5/8/2020
+;
+button R0 C0 F0 T" BACK " A"return"
+text T"   "
+value F0 D0 W18 N530
+text F0 T"."
+value F0 D0 W18 N531
+text F0 T"."
+value F0 D0 W18 N532
+text F0 T"."
+value F0 D0 W18 N533
+image R11 C0 L"hline.img"
+button R15 C5 T"Disable Steppers" A"M84"
+button R27 C5 T"Bed Leveling" A"M98 P#0" L"/sys/basic_bed_lev"
+button R39 C5 T"Reboot Duet Maestro" A"M999"
+button R51 C5 T"Powerloss Recovery" A"menu powerRecover"
