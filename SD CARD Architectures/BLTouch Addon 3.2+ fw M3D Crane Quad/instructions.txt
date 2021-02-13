@@ -16,6 +16,6 @@ M574 Y1 S1 P"ystop"                                ; configure active-high endst
 
 ; Z-Probe
 M950 S0 C"^zprobe.mod"                             ; create servo pin 0 for BLTouch
-M558 P9 C"^zprobe.in" H5 A6 S0.03 F120 T7800       ; set Z probe type to bltouch and the dive height + speeds
+M558 P9 C"^zprobe.in" H5 A6 S0.03 F120 T9000       ; set Z probe type to bltouch and the dive height + speeds
 G31 P500 X49 Y10 Z0.00                             ; set Z probe trigger value, offset and trigger height
 M557 X35:195 Y35:195 S40                           ; define mesh grid
