@@ -11,14 +11,14 @@
     <width>0.48</width>
     <extrusionMultiplier>0.94</extrusionMultiplier>
     <useRetract>1</useRetract>
-    <retractionDistance>4</retractionDistance>
+    <retractionDistance>4.5</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
     <retractionZLift>0.4</retractionZLift>
     <retractionSpeed>1800</retractionSpeed>
     <useCoasting>0</useCoasting>
     <coastingDistance>0.2</coastingDistance>
     <useWipe>1</useWipe>
-    <wipeDistance>2</wipeDistance>
+    <wipeDistance>2.5</wipeDistance>
   </extruder>
   <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.2</layerHeight>
@@ -91,7 +91,7 @@
     <isHeatedBed>0</isHeatedBed>
     <stabilizeAtStartup>1</stabilizeAtStartup>
     <setpoint layer="1" temperature="245"/>
-    <setpoint layer="3" temperature="235"/>
+    <setpoint layer="3" temperature="240"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>0</temperatureNumber>
@@ -248,7 +248,7 @@
       <isHeatedBed>0</isHeatedBed>
       <stabilizeAtStartup>1</stabilizeAtStartup>
       <setpoint layer="1" temperature="245"/>
-      <setpoint layer="3" temperature="235"/>
+      <setpoint layer="3" temperature="240"/>
     </temperatureController>
     <temperatureController name="Heated Bed">
       <temperatureNumber>0</temperatureNumber>
