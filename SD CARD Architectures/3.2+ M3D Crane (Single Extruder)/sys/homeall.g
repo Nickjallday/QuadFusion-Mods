@@ -9,9 +9,9 @@ G1 H2 X5 Y5 F900        ; go back a few mm
 G1 H1 X-500 Y-500 F240  ; move slowly to X and Y axis endstops once more (second pass)
 G1 X3 Y28 F900          ; Move to Corner
 G92 X0 Y0               ; X is at Zero
-G1 Z-450 1200 S1	; move quickly to Z endstop position 
-G1 Z5 F600 S2		; go back a few mm	
-G1 Z-450 F300 S1	; move slowly to z to endstop positon (Z0)
+G1 Z-450 1200 H1	; move quickly to Z endstop position 
+G1 Z5 F600 H2		; go back a few mm	
+G1 Z-450 F300 H1	; move slowly to z to endstop positon (Z0)
 G1 Z5           	; lift Z relative to current position
 G90             	; absolute positioning
 
