@@ -1,0 +1,17 @@
+; Configuration file for M3D QuadFusion Duet Maestro (firmware version 2.0.3 or newer)
+; Created by Nickjallday (https://github.com/Nickjallday/QuadFusion-Mods)
+; Created Date: 5/8/2020
+;
+button R3 C5 F0 T" BACK " A"return"
+text R0 C87 F0 T"Nozzle:"
+alter R10 C80 H2 N100 W20
+text T" / "
+value N0 W20
+;
+text R15 C5 F0 T"mm/s: "
+button R15 C35 F0 T" 3 " A"G0 F300"
+button R15 C57 F0 T" 1 " A"G0 F60"
+;
+button R27 C5 F0 T"LOAD" A"M98 Pload_port0"
+;
+button R27 C65 F0 T"UNLOAD" A"M98 Punload_port0"

@@ -36,8 +36,8 @@ M906 X760 Y760 Z760 E900 I50                       ; set motor currents (mA) and
 M84 S60                                            ; Set idle timeout
 
 ; Axis Limits
-M208 X0 Y0 Z0 S1				   ; set axis minima
-M208 X230 Y230 Z250 S0                             ; set axis maxima
+M208 X-1 Y-26 Z-5 S1				   ; set axis minima
+M208 X245 Y235 Z250 S0                             ; set axis maxima
 
 ; Endstops
 M574 X1 S1 P"xstop"                                ; configure active-high endstop for low end on X via pin xstop

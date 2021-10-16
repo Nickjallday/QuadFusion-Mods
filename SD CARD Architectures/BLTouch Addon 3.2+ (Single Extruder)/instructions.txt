@@ -1,0 +1,15 @@
+1. Copy and Paste the "sys", "macros", & "menu" folder to the root of your SD Card. They will add nessesary BLTouch files to the SD card.
+
+2. Replace the "; Endstops" in your /sys/config.g with the following settings (be sure to delete the the Z endstop line)
+
+; Endstops
+M574 X1 S1 P"xstop"                                ; configure active-high endstop for low end on X via pin xstop
+M574 Y1 S1 P"ystop"                                ; configure active-high endstop for low end on Y via pin ystop
+
+3. Add the "; Z-Probe" commands below after the "; Endstops" commands in your /sys/config.g
+
+; Z-Probe
+M950 S0 C"^zprobe.mod"                             ; create servo pin 0 for BLTouch
+M558 P9 C"^zprobe.in" H5 A6 S0.03 F120 T9000       ; set Z probe type to bltouch and the dive height + speeds
+G31 P500 X-43 Y0 Z0.00                             ; set Z probe trigger value, offset and trigger height
+M557 X35:195 Y35:195 S40                           ; define mesh grid
