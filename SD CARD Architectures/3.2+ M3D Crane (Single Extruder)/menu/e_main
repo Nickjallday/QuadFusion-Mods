@@ -14,5 +14,5 @@ value F0 D0 W18 N533
 image R11 C0 L"hline.img"
 button R15 C5 T"Disable Steppers" A"M84"
 button R27 C5 T"Load/Unload Filament" A"menu fload"
-button R39 C5 T"Bed Leveling" A"menu basic_bed_lev"
+button R39 C5 T"Bed Leveling" A"M98 P#0" L"/sys/basic_bed_lev"
 button R51 C5 T"More..." A"adv_main"
